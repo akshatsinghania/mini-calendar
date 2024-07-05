@@ -9,14 +9,29 @@
     <div class="hero">
       <div class="calendar">
         <div class="left">
-          <p>05</p>
-          <p>Friday</p>
+          <p id="year">05</p>
+          <p id="day ">Friday</p>
         </div>
         <div class="right">
-          <p>July</p>
-          <p>2024</p>
+          <p id="month ">July</p>
+          <p id="year">2024</p>
         </div>
       </div>
     </div>
+    <script>
+      const date = document.getElementById("date");
+      const day = document.getElementById("day");
+      const month = document.getElementById("month");
+      const year = document.getElementById("year");
+
+      const today = new Date();
+
+      console.log(today);
+
+      date.innerHTML = today.getDate();
+      day.innerHTML = today.getDay();
+      month.innerHTML = today.getMonth();
+      year.innerHTML = today.getFullYear();
+    </script>
   </body>
 </html>
