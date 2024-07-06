@@ -9,11 +9,11 @@
     <div class="hero">
       <div class="calendar">
         <div class="left">
-          <p id="year">05</p>
+          <p id="date">05</p>
           <p id="day ">Friday</p>
         </div>
         <div class="right">
-          <p id="month ">July</p>
+          <p id="month">July</p>
           <p id="year">2024</p>
         </div>
       </div>
@@ -53,7 +53,7 @@
 
       console.log(today);
 
-      date.innerHTML = today.getDate();
+      date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate();
       day.innerHTML = weekDays[today.getDay()];
       month.innerHTML = allMonths[today.getMonth()];
       year.innerHTML = today.getFullYear();
